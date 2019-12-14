@@ -4,21 +4,21 @@ let losses = 0;
 let guesses = [];
 let guessesRemaining = 9;
 let answer = [];
-
-//Loops through word and displays underscores instead of actual letters
 let word = characters[Math.floor(Math.random() * characters.length)];
-let guessedWord;
 
-for (let i = 0; i < word.length; i++) {
-    answer[i] = ("_");
-}
-console.log(word);
 
 
 //Starts/restarts game
 function startGame() {
-    guessesRemaining = 9;
+    guessesRemaining = 5;
     guesses = [];
+    answer = [];
+
+    //Loops through word and displays underscores instead of actual letters
+    for (let i = 0; i < word.length; i++) {
+        answer[i] = ("_");
+    }
+    console.log(word);
 
     //Displays Wins
     document.getElementById('wins').innerHTML = wins;
@@ -53,14 +53,30 @@ function letterIsCorrect(letter) {
                 answer[j] = letter;
             }
         }
-        document.getElementById('character').innerHTML = answer;
         // console.log(answer);
     } else {
         guesses.push(letter);
-        document.getElementById('guessed').innerHTML = guesses;
         guessesRemaining--;
-        document.getElementById('guessesRemaining').innerHTML = guessesRemaining;
     }
+}
+
+function update() {
+    document.getElementById('character').innerHTML = answer.join(' ');
+    document.getElementById('guessed').innerHTML = guesses;
+    document.getElementById('guessesRemaining').innerHTML = guessesRemaining;
+
+    if (answer === word.length) {
+        wins++;
+        alert(`You Win!`);
+        document.getElementById('wins').innerHTML = wins;
+        startGame();
+    } else if (guessesRemaining === 0) {
+        losses++;
+        alert('You Lose :(');
+        document.getElementById('losses').innerHTML = losses;
+        startGame();
+    }
+
 }
 
 startGame();
@@ -69,11 +85,15 @@ startGame();
 document.onkeyup = function (event) {
     // Check if the key pressed is a letter.
     if (event.keyCode >= 65 && event.keyCode <= 90) {
+
         // Converts all key clicks to lowercase letters.
         let letterGuessed = event.key.toLowerCase();
-        console.log(letterGuessed);
+        // console.log(letterGuessed);
+
         //Checks if letter is Correct
         letterIsCorrect(letterGuessed);
-      
+
+        //Updates screen after each round;
+        update();
     }
 }
