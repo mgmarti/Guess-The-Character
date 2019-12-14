@@ -7,11 +7,12 @@ let answer = [];
 
 //Loops through word and displays underscores instead of actual letters
 let word = characters[Math.floor(Math.random() * characters.length)];
+let guessedWord;
 
 for (let i = 0; i < word.length; i++) {
-    answer[i] = "_";
+    answer[i] = ("_");
 }
-// console.log(word);
+console.log(word);
 
 
 //Starts/restarts game
@@ -52,7 +53,13 @@ function letterIsCorrect(letter) {
                 answer[j] = letter;
             }
         }
-        console.log(answer);
+        document.getElementById('character').innerHTML = answer;
+        // console.log(answer);
+    } else {
+        guesses.push(letter);
+        document.getElementById('guessed').innerHTML = guesses;
+        guessesRemaining--;
+        document.getElementById('guessesRemaining').innerHTML = guessesRemaining;
     }
 }
 
@@ -67,6 +74,6 @@ document.onkeyup = function (event) {
         console.log(letterGuessed);
         //Checks if letter is Correct
         letterIsCorrect(letterGuessed);
-   
+      
     }
 }
