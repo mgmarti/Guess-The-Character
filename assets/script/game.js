@@ -4,16 +4,14 @@ let losses = 0;
 let guesses = [];
 let guessesRemaining = 9;
 let answer = [];
-let word = characters[Math.floor(Math.random() * characters.length)];
-
-
-
+let word = '';
 
 //Starts/restarts game
 function startGame() {
     guessesRemaining = 5;
     guesses = [];
     answer = [];
+    word = characters[Math.floor(Math.random() * characters.length)];
 
     //Loops through word and displays underscores instead of actual letters
     for (let i = 0; i < word.length; i++) {
@@ -67,12 +65,11 @@ function update() {
     document.getElementById('guessesRemaining').innerHTML = guessesRemaining;
     // console.log(answer)
     // console.log(word)
-
     let finalAnswer = answer.join('');
     // console.log(finalAnswer);
 
     if (finalAnswer === word) {
-        wins++
+        wins++;
         alert(`You Win!`);
         document.getElementById('wins').innerHTML = wins;
         startGame();
