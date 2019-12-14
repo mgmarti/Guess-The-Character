@@ -65,14 +65,18 @@ function update() {
     document.getElementById('character').innerHTML = answer.join(' ');
     document.getElementById('guessed').innerHTML = guesses;
     document.getElementById('guessesRemaining').innerHTML = guessesRemaining;
-    console.log(answer)
+    // console.log(answer)
+    // console.log(word)
 
+    let finalAnswer = answer.join('');
+    // console.log(finalAnswer);
 
-    if (answer.length) {
-        wins++;
+    if (finalAnswer === word) {
+        wins++
         alert(`You Win!`);
         document.getElementById('wins').innerHTML = wins;
         startGame();
+
     } else if (guessesRemaining === 0) {
         losses++;
         alert('You Lose :(');
