@@ -1,9 +1,10 @@
-# Guess-The-Character
-> Harry Potter theme letter guessing game.
+# Guess The Character
+> Harry Potter themed letter guessing game.
 
 ## Table of contents
 * [General info](#general-info)
 * [Screenshots](#screenshots)
+* [Live Project](#live-project)
 * [Technologies](#technologies)
 * [Status](#status)
 * [Contact](#contact)
@@ -14,6 +15,8 @@ Make a game in which the player has a limited number of chances to correctly cho
 
 ## Screenshots
 ![Example screenshot](./img/screenshot.png)
+
+## Live Project
 
 ## Technologies
 * HTML
