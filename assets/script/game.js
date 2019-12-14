@@ -1,4 +1,4 @@
-const characters = ['dobby', 'harry', 'hermoine', 'ron', 'hedwig', 'draco', 'dumbledore', 'voldemort']
+const characters = ['dobby', 'harry', 'hermoine', 'ron', 'hedwig', 'draco', 'dumbledore', 'voldemort', 'fred', 'george', 'hagrid', 'sirius', 'bellatrix', 'luna', 'nagini']
 let wins = 0;
 let losses = 0;
 let guesses = [];

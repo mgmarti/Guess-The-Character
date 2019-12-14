@@ -17,6 +17,7 @@ Make a game in which the player has a limited number of chances to correctly cho
 ![Example screenshot](./img/screenshot.png)
 
 ## Live Project
+https://mgmarti.github.io/Guess-The-Character/
 
 ## Technologies
 * HTML
