@@ -9,7 +9,7 @@ html {
 }
 
 body {
-    background-image: url('../images/paper.jpg');
+    background-image: url('../images/artem-maltsev-3n7DdlkMfEg-unsplash.jpg');
     background-size: cover;
     color: goldenrod;
 }
@@ -18,12 +18,18 @@ section {
     margin: auto;
 }
 
+header {
+    text-align: center;
+    padding-top: 40px;
+}
+
 .container {
-    margin-top: 20px;
+    margin-top: 100px;
+    background-color: rgba(128, 0, 0, 0.555);
+    border-radius: 15px;
 }
 
 .row {
-    background-color: rgba(128, 0, 0, 0.7);
     margin: auto;
     padding: 100px 50px 70px;
 }
