@@ -26,7 +26,7 @@ https://mgmarti.github.io/Guess-The-Character/
 * Bootstrap
 
 ## Status
-Project is: _in progress_, _finished_, _no longer continue_ and why?
+Project is: _finished_
 
 ## Contact
 Created by [@mgmarti](https://www.monicamartinez.dev) - feel free to contact me!
