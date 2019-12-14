@@ -8,6 +8,7 @@ let word = characters[Math.floor(Math.random() * characters.length)];
 
 
 
+
 //Starts/restarts game
 function startGame() {
     guessesRemaining = 5;
@@ -18,7 +19,7 @@ function startGame() {
     for (let i = 0; i < word.length; i++) {
         answer[i] = ("_");
     }
-    console.log(word);
+    // console.log(word);
 
     //Displays Wins
     document.getElementById('wins').innerHTML = wins;
@@ -64,8 +65,10 @@ function update() {
     document.getElementById('character').innerHTML = answer.join(' ');
     document.getElementById('guessed').innerHTML = guesses;
     document.getElementById('guessesRemaining').innerHTML = guessesRemaining;
+    console.log(answer)
 
-    if (answer === word.length) {
+
+    if (answer.length) {
         wins++;
         alert(`You Win!`);
         document.getElementById('wins').innerHTML = wins;

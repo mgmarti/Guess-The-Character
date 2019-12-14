@@ -1,6 +1,7 @@
 * {
     padding: 0;
     margin: 0;
+    box-sizing: border-box;
 }
 
 html {
@@ -10,8 +11,24 @@ html {
 body {
     background-image: url('../images/paper.jpg');
     background-size: cover;
+    color: goldenrod;
+}
+
+section {
+    margin: auto;
 }
 
 .container {
     margin-top: 20px;
+}
+
+.row {
+    background-color: rgba(128, 0, 0, 0.7);
+    margin: auto;
+    padding: 100px 50px 70px;
+}
+
+.col-md-9 {
+    margin-top: 20px;
+    margin-bottom: 35px;
 }
